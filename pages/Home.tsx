@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AuditForm from '../components/AuditForm';
+import AuditForm from '../components/AuditForm.tsx';
 
 const Home: React.FC = () => {
   return (

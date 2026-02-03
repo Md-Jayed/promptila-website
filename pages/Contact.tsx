@@ -1,6 +1,6 @@
 
 import React from 'react';
-import AuditForm from '../components/AuditForm';
+import AuditForm from '../components/AuditForm.tsx';
 
 const Contact: React.FC = () => {
   return (

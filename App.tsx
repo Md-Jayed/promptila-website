@@ -1,15 +1,15 @@
 
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import HowItWorks from './pages/HowItWorks';
-import Services from './pages/Services';
-import Industries from './pages/Industries';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
+import Header from './components/Header.tsx';
+import Footer from './components/Footer.tsx';
+import Home from './pages/Home.tsx';
+import HowItWorks from './pages/HowItWorks.tsx';
+import Services from './pages/Services.tsx';
+import Industries from './pages/Industries.tsx';
+import About from './pages/About.tsx';
+import Contact from './pages/Contact.tsx';
+import NotFound from './pages/NotFound.tsx';
 
 const App: React.FC = () => {
   const { pathname } = useLocation();
