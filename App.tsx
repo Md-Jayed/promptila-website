@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Industries from './pages/Industries';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   const { pathname } = useLocation();
@@ -29,6 +30,8 @@ const App: React.FC = () => {
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Catch-all for 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

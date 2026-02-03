@@ -7,9 +7,13 @@ const Home: React.FC = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-white py-24 sm:py-32 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center space-x-2 bg-indigo-50 border border-indigo-100 px-3 py-1 rounded-full mb-8">
+              <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
+              <span className="text-indigo-700 text-xs font-bold uppercase tracking-wider">Now optimizing for Gemini & Claude</span>
+            </div>
             <h1 className="text-5xl sm:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
               We help businesses <span className="text-indigo-600">get chosen</span> by AI — not buried by it.
             </h1>
@@ -36,6 +40,20 @@ const Home: React.FC = () => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 opacity-10 pointer-events-none">
           <div className="absolute top-10 left-10 w-96 h-96 bg-indigo-400 rounded-full blur-[100px]"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-[100px]"></div>
+        </div>
+      </section>
+
+      {/* Trust Section / Logos */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm font-semibold text-slate-400 uppercase tracking-widest mb-8">Helping leaders navigate the AI shift</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-30 grayscale contrast-125">
+             <div className="text-2xl font-black italic tracking-tighter">FINTECH+</div>
+             <div className="text-2xl font-black italic tracking-tighter">HEALTH.LY</div>
+             <div className="text-2xl font-black italic tracking-tighter">LEGALHUB</div>
+             <div className="text-2xl font-black italic tracking-tighter">HOMEPRO</div>
+             <div className="text-2xl font-black italic tracking-tighter">SaaSFLOW</div>
+          </div>
         </div>
       </section>
 
@@ -152,13 +170,13 @@ const Home: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-slate-800 rounded-2xl overflow-hidden">
-                <img src="https://picsum.photos/400/400?random=1" alt="Industry" className="w-full h-full object-cover opacity-60" />
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=400&h=400" alt="Industry" className="w-full h-full object-cover opacity-60" />
               </div>
               <div className="aspect-square bg-indigo-900/50 rounded-2xl p-8 flex items-center justify-center text-center">
                 <span className="text-indigo-200 font-bold italic text-lg leading-snug">"The early adopters will own the recommendations."</span>
               </div>
               <div className="aspect-square bg-slate-800 rounded-2xl overflow-hidden col-span-2">
-                <img src="https://picsum.photos/800/400?random=2" alt="Office" className="w-full h-full object-cover opacity-60" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800&h=400" alt="Office" className="w-full h-full object-cover opacity-60" />
               </div>
             </div>
           </div>
