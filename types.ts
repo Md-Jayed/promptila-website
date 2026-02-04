@@ -7,6 +7,7 @@ export interface AuditRequest {
   businessName: string;
   website: string;
   email: string;
+  phone: string;
   industry: string;
   location: string;
 }

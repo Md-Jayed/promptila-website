@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { AuditRequest } from '../types';
+import { AuditRequest } from '../types.ts';
 
 const AuditForm: React.FC = () => {
   const [formData, setFormData] = useState<AuditRequest>({
@@ -8,6 +8,7 @@ const AuditForm: React.FC = () => {
     businessName: '',
     website: '',
     email: '',
+    phone: '',
     industry: '',
     location: '',
   });
@@ -81,6 +82,19 @@ const AuditForm: React.FC = () => {
           />
         </div>
         <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all"
+            placeholder="+1 (555) 000-0000"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
           <label htmlFor="businessName" className="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
           <input
             type="text"
@@ -124,7 +138,7 @@ const AuditForm: React.FC = () => {
             <option value="Other">Other</option>
           </select>
         </div>
-        <div>
+        <div className="md:col-span-2">
           <label htmlFor="location" className="block text-sm font-medium text-slate-700 mb-1">Primary Location</label>
           <input
             type="text"

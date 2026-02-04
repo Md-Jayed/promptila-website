@@ -7,6 +7,7 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const navLinks = [
+    { name: 'Home', path: '/' },
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Services', path: '/services' },
     { name: 'Industries', path: '/industries' },
@@ -75,7 +76,9 @@ const Header: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-base font-medium text-slate-600 hover:text-indigo-600"
+                className={`block px-3 py-2 text-base font-medium ${
+                  isActive(link.path) ? 'text-indigo-600 bg-slate-50' : 'text-slate-600 hover:text-indigo-600'
+                }`}
               >
                 {link.name}
               </Link>
