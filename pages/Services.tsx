@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -58,9 +57,9 @@ const Services: React.FC = () => {
                 <div className="p-8 pt-0">
                   <Link
                     to="/contact"
-                    className="block w-full text-center py-3 bg-white border-2 border-indigo-600 text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-colors"
+                    className="block w-full text-center py-3 bg-white border-2 border-indigo-600 text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-colors text-sm px-2"
                   >
-                    Learn More
+                    Your Free AI Visibility Audit
                   </Link>
                 </div>
               </div>
