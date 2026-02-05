@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
             <div>
               <h1 className="text-5xl font-extrabold text-slate-900 mb-6">Get in Touch</h1>
               <p className="text-xl text-slate-600 leading-relaxed mb-10">
-                Stop guessing how AI models view your brand. Request your audit below or reach out to our team directly.
+                Stop guessing how AI models view your brand. Request your free AI report below or reach out to our team directly.
               </p>
 
               {/* Direct Contact Details */}

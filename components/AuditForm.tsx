@@ -164,7 +164,7 @@ const AuditForm: React.FC = () => {
               <span>Processing...</span>
             </>
           ) : (
-            <span>Request Your AI Visibility Audit</span>
+            <span>Free AI report</span>
           )}
         </button>
         <div className="mt-6 flex items-center justify-center space-x-4 opacity-50 grayscale">

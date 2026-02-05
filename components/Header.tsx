@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -45,7 +46,7 @@ const Header: React.FC = () => {
               to="/contact"
               className="inline-flex items-center px-5 py-2.5 border border-transparent text-sm font-semibold rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition-all active:scale-95"
             >
-              Request Audit
+              Free AI report
             </Link>
           </nav>
 
@@ -88,7 +89,7 @@ const Header: React.FC = () => {
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2 text-base font-medium text-indigo-600"
             >
-              Request AI Visibility Audit
+              Free AI report
             </Link>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Home: React.FC = () => {
                 to="/contact"
                 className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl shadow-xl hover:bg-indigo-700 transition-all active:scale-95 text-lg"
               >
-                Request Your AI Visibility Audit
+                Free AI report
               </Link>
               <Link
                 to="/how-it-works"
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Is Your Business AI-Ready?</h2>
-            <p className="text-slate-600 text-lg">Request your preliminary audit today and see where you stand.</p>
+            <p className="text-slate-600 text-lg">Get your free AI report today and see where you stand.</p>
           </div>
           <AuditForm />
         </div>
