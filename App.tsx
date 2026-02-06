@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header.tsx';
 import Footer from './components/Footer.tsx';
+import CookieConsent from './components/CookieConsent.tsx';
 import Home from './pages/Home.tsx';
 import HowItWorks from './pages/HowItWorks.tsx';
 import Services from './pages/Services.tsx';
@@ -41,6 +42,7 @@ const App: React.FC = () => {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
