@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const PrivacyPolicy: React.FC = () => {
@@ -7,93 +6,92 @@ const PrivacyPolicy: React.FC = () => {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-extrabold text-slate-900 mb-4">Privacy Policy</h1>
-          <p className="text-slate-500 font-medium mb-12 italic">Last updated: February 2026</p>
+          <p className="text-slate-500 font-medium mb-12 italic">Effective Date: September 1st 2025</p>
           
-          <div className="prose prose-slate prose-lg max-w-none space-y-8 text-slate-600">
+          <div className="prose prose-slate prose-lg max-w-none space-y-10 text-slate-600">
             <p>
-              Promptila (“we,” “our,” or “us”) respects your privacy and is committed to protecting it. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.
+              Promptila (“we,” “our,” or “us”) respects your privacy and is committed to protecting it. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or use our services.
             </p>
 
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Information We Collect</h2>
-              <p>We may collect the following types of information:</p>
+              <p>We may collect the following types of information.</p>
               
-              <div className="mt-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Personal Information</h3>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>Name</li>
-                  <li>Email address</li>
-                  <li>Business name</li>
-                  <li>Website URL</li>
-                  <li>Contact details you voluntarily submit through forms, emails, or reports</li>
-                </ul>
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-slate-800 mb-3">Information You Provide</h3>
+                <p>
+                  When you contact us, request an AI Visibility Scan, or use our services, you may provide your name, business name, email address, website URL, location information, and any information you voluntarily submit through forms or email.
+                </p>
               </div>
 
-              <div className="mt-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Non-Personal Information</h3>
-                <ul className="list-disc pl-6 space-y-1">
-                  <li>IP address</li>
-                  <li>Browser type</li>
-                  <li>Device information</li>
-                  <li>Pages visited and interaction data</li>
-                  <li>Referring URLs</li>
-                </ul>
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-slate-800 mb-3">Automatically Collected Information</h3>
+                <p>
+                  When you visit our website, we may automatically collect information such as your IP address, browser type, device information, pages visited, referring URLs, and the date and time of your visits. This information is collected using standard technologies such as cookies and analytics tools.
+                </p>
               </div>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">How We Use Your Information</h2>
-              <p>We use collected information to:</p>
-              <ul className="list-disc pl-6 mt-4 space-y-1">
-                <li>Provide AI Visibility scans, reports, and services</li>
-                <li>Communicate with you about services, updates, or support</li>
-                <li>Improve website performance and user experience</li>
-                <li>Analyze trends and usage patterns</li>
-                <li>Prevent fraud, abuse, or misuse of our services</li>
-              </ul>
-              <p className="mt-4 font-semibold text-slate-900 italic">We do not sell or rent your personal information.</p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Cookies and Tracking Technologies</h2>
-              <p>Promptila uses cookies and similar technologies to:</p>
-              <ul className="list-disc pl-6 mt-4 space-y-1">
-                <li>Improve site functionality</li>
-                <li>Analyze traffic and usage behavior</li>
-                <li>Enhance performance and user experience</li>
-              </ul>
-              <p className="mt-4">You can disable cookies through your browser settings, though some features may not function properly.</p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Third-Party Services</h2>
               <p>
-                We may use third-party tools (analytics, hosting, email delivery, reporting platforms) to operate our services. These providers only receive information necessary to perform their functions and are required to protect it.
+                We use the information we collect to provide and improve our services, perform AI Visibility Scans and related analyses, respond to inquiries and support requests, communicate with you about our services, improve website performance and user experience, and maintain security and prevent misuse. We do not sell your personal information.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Cookies and Analytics</h2>
+              <p>
+                Promptila may use cookies or similar technologies to understand how visitors use our site, improve site functionality and performance, and analyze traffic and usage trends. You can disable cookies in your browser settings if you prefer.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">How We Share Information</h2>
+              <p>
+                We may share information only in limited circumstances, such as with trusted service providers who assist in operating our website or services, when required by law or legal process, or to protect the rights, property, or safety of Promptila or others. We do not share personal information for advertising resale or unrelated third-party marketing.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Data Security</h2>
               <p>
-                We take reasonable administrative and technical measures to protect your information. However, no online system is 100% secure, and we cannot guarantee absolute security.
+                We take reasonable measures to protect your information using administrative, technical, and physical safeguards. However, no method of transmission over the internet is 100 percent secure.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Your Rights</h2>
-              <p>You may:</p>
-              <ul className="list-disc pl-6 mt-4 space-y-1">
-                <li>Request access to your personal data</li>
-                <li>Request corrections or deletion</li>
-                <li>Opt out of non-essential communications</li>
-              </ul>
-              <p className="mt-4">Requests can be sent to the contact information provided on our website.</p>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Third-Party Links</h2>
+              <p>
+                Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites, and we encourage you to review their privacy policies separately.
+              </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Policy Updates</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Children’s Privacy</h2>
               <p>
-                We may update this Privacy Policy at any time. Changes will be posted on this page with a revised date.
+                Promptila does not knowingly collect personal information from individuals under the age of 13. If we become aware that such information has been collected, we will take steps to delete it.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Your Rights and Choices</h2>
+              <p>
+                Depending on your location, you may have the right to request access to your personal data, request correction or deletion of your data, or withdraw consent for data processing. To exercise these rights, contact us using the information below.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Changes to This Policy</h2>
+              <p>
+                We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective date.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Contact Us</h2>
+              <p>
+                If you have questions about this Privacy Policy or how your information is handled, you can contact us at <a href="mailto:hello@promptila.com" className="text-indigo-600 hover:underline">hello@promptila.com</a> or visit <a href="https://promptila.com" className="text-indigo-600 hover:underline">https://promptila.com</a>.
               </p>
             </div>
           </div>

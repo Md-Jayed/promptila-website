@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -22,10 +21,12 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold tracking-tight text-slate-900">
-                PROMPTILA<span className="text-indigo-600">.</span>
-              </span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="https://i.ibb.co/GBsQfJL/promptila-logo-removebg-preview.png" 
+                alt="Promptila" 
+                className="h-10 w-auto object-contain"
+              />
             </Link>
           </div>
           

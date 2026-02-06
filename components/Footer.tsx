@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,8 +7,12 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-12 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="text-white text-2xl font-bold tracking-tight">
-              PROMPTILA<span className="text-indigo-500">.</span>
+            <Link to="/" className="flex items-center mb-6">
+              <img 
+                src="https://i.ibb.co/GBsQfJL/promptila-logo-removebg-preview.png" 
+                alt="Promptila" 
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <p className="mt-4 text-sm leading-relaxed max-w-xs">
               Optimizing high-trust brands for the AI recommendation era. We ensure your business is the only logical answer.
