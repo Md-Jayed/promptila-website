@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AuditForm from '../components/AuditForm.tsx';
@@ -25,7 +24,7 @@ const Home: React.FC = () => {
                 to="/contact"
                 className="w-full sm:w-auto px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl shadow-xl hover:bg-indigo-700 transition-all active:scale-95 text-lg"
               >
-                Free AI report
+                Get Your Free AI Report
               </Link>
               <Link
                 to="/how-it-works"

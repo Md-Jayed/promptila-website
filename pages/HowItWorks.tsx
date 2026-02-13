@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -87,7 +86,7 @@ const HowItWorks: React.FC = () => {
               to="/contact"
               className="inline-block px-10 py-5 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-slate-50 transition-all active:scale-95 text-lg"
             >
-              Free AI report
+              Get Your Free AI Report
             </Link>
           </div>
         </div>

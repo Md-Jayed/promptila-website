@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,7 +59,7 @@ const Services: React.FC = () => {
                     to="/contact"
                     className="block w-full text-center py-3 bg-white border-2 border-indigo-600 text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-colors text-sm px-2"
                   >
-                    Free AI report
+                    Get Your Free AI Report
                   </Link>
                 </div>
               </div>
@@ -77,7 +76,7 @@ const Services: React.FC = () => {
             to="/contact"
             className="px-10 py-5 bg-indigo-600 text-white font-bold rounded-xl shadow-lg hover:bg-indigo-700 transition-all active:scale-95 text-lg"
           >
-            Free AI report
+            Get Your Free AI Report
           </Link>
         </div>
       </section>
