@@ -158,22 +158,16 @@ const AuditForm: React.FC = () => {
         </div>
         <div>
           <label htmlFor="industry" className="block text-sm font-medium text-slate-700 mb-1">Industry</label>
-          <select
+          <input
+            type="text"
             id="industry"
             name="industry"
             required
-            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all appearance-none bg-no-repeat bg-[right_1rem_center]"
-            style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 24 24\' stroke=\'%2364748b\'%3E%3Cpath stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M19 9l-7 7-7-7\' /%3E%3C/svg%3E")', backgroundSize: '1.25rem' }}
+            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
+            placeholder="e.g. HVAC, Legal, Medical"
             value={formData.industry}
             onChange={handleChange}
-          >
-            <option value="">Select industry...</option>
-            <option value="HVAC">HVAC & Home Services</option>
-            <option value="Medical">Medical & Wellness</option>
-            <option value="Legal">Legal & Professional</option>
-            <option value="Retail">Retail & Consumer Goods</option>
-            <option value="Other">Other</option>
-          </select>
+          />
         </div>
         <div className="md:col-span-2">
           <label htmlFor="location" className="block text-sm font-medium text-slate-700 mb-1">Primary Location</label>

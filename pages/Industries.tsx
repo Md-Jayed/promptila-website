@@ -69,7 +69,7 @@ const Industries: React.FC = () => {
             to="/contact"
             className="inline-block px-10 py-5 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all active:scale-95"
           >
-            Start Your Industry Audit
+            Get Your Free AI Report
           </Link>
         </div>
       </section>

@@ -156,7 +156,7 @@ const Home: React.FC = () => {
                   "Law Firms",
                   "Professional Services",
                   "Local Specialists",
-                  "High-Ticket B2B"
+                  "plus many more"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center space-x-3 text-slate-300">
                     <svg className="w-5 h-5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
