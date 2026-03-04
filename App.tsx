@@ -10,6 +10,7 @@ import Services from './pages/Services.tsx';
 import Industries from './pages/Industries.tsx';
 import About from './pages/About.tsx';
 import Mission from './pages/Mission.tsx';
+import CaseStudyBigLake from './pages/CaseStudyBigLake.tsx';
 import Contact from './pages/Contact.tsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.tsx';
 import TermsOfService from './pages/TermsOfService.tsx';
@@ -35,6 +36,7 @@ const App: React.FC = () => {
           <Route path="/industries" element={<Industries />} />
           <Route path="/about" element={<About />} />
           <Route path="/mission" element={<Mission />} />
+          <Route path="/case-study/big-lake-candy" element={<CaseStudyBigLake />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />

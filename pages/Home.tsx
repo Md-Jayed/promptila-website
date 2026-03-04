@@ -13,10 +13,10 @@ const Home: React.FC = () => {
               <span className="flex h-2 w-2 rounded-full bg-indigo-600 animate-pulse"></span>
               <span className="text-indigo-700 text-xs font-bold uppercase tracking-wider">Now optimizing for Gemini & Claude</span>
             </div>
-            <h1 className="text-5xl sm:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
               We help businesses <span className="text-indigo-600">get chosen</span> by AI — not buried by it.
             </h1>
-            <p className="mt-8 text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-8 text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
               Traditional SEO is no longer enough. We optimize your brand for AI search engines like ChatGPT, Gemini, and AI Overviews so you're the first recommendation users see.
             </p>
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -42,6 +42,27 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Case Study Highlight Block */}
+      <section className="bg-indigo-600 py-12 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-white">
+              <span className="inline-block px-3 py-1 bg-indigo-500 text-indigo-100 font-bold rounded-full text-[10px] uppercase tracking-widest mb-4">Case Study Proof</span>
+              <h2 className="text-xl md:text-2xl font-bold leading-tight">
+                Big Lake Candy Company went from invisible to <span className="text-indigo-200 underline decoration-indigo-300 underline-offset-4">#1 on ChatGPT</span> in 30 days.
+              </h2>
+            </div>
+            <Link
+              to="/case-study/big-lake-candy"
+              className="whitespace-nowrap px-8 py-4 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-all active:scale-95"
+            >
+              View Case Study
+            </Link>
+          </div>
+        </div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+      </section>
+
       {/* Trust Section / Logos */}
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,10 +83,10 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-indigo-600 font-bold uppercase tracking-widest text-sm">The Reality</span>
-              <h2 className="text-4xl font-bold text-slate-900 mt-4 leading-tight">
+              <h2 className="text-3xl font-bold text-slate-900 mt-4 leading-tight">
                 Search is changing. <br />Are you being cited?
               </h2>
-              <p className="mt-6 text-slate-600 text-lg leading-relaxed">
+              <p className="mt-6 text-slate-600 text-base leading-relaxed">
                 Customers aren't just scrolling through lists of blue links anymore. They're asking AI questions. 
                 If ChatGPT, Perplexity, or Google AI Overviews don't know who you are, they won't recommend you.
               </p>
@@ -109,8 +130,8 @@ const Home: React.FC = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold text-slate-900">How Promptila Works</h2>
-            <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">Our 3-step framework ensures AI models understand, trust, and recommend your business.</p>
+            <h2 className="text-3xl font-bold text-slate-900">How Promptila Works</h2>
+            <p className="mt-4 text-slate-600 text-base max-w-2xl mx-auto">Our 3-step framework ensures AI models understand, trust, and recommend your business.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
@@ -145,8 +166,8 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 leading-tight">Built for businesses where trust is the #1 currency.</h2>
-              <p className="text-slate-400 text-lg mb-8">
+              <h2 className="text-3xl font-bold mb-6 leading-tight">Built for businesses where trust is the #1 currency.</h2>
+              <p className="text-slate-400 text-base mb-8">
                 If your customers ask complex questions before buying, you need AI Visibility Optimization.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -167,12 +188,12 @@ const Home: React.FC = () => {
                 ))}
               </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:mx-0">
               <div className="aspect-square bg-slate-800 rounded-2xl overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=400&h=400" alt="Industry" className="w-full h-full object-cover opacity-60" />
               </div>
-              <div className="aspect-square bg-indigo-900/50 rounded-2xl p-8 flex items-center justify-center text-center">
-                <span className="text-indigo-200 font-bold italic text-lg leading-snug">"The early adopters will own the recommendations."</span>
+              <div className="aspect-square bg-indigo-900/50 rounded-2xl p-6 flex items-center justify-center text-center">
+                <span className="text-indigo-200 font-bold italic text-base leading-snug">"The early adopters will own the recommendations."</span>
               </div>
               <div className="aspect-square bg-slate-800 rounded-2xl overflow-hidden col-span-2">
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800&h=400" alt="Office" className="w-full h-full object-cover opacity-60" />
@@ -186,8 +207,8 @@ const Home: React.FC = () => {
       <section id="audit" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Is Your Business AI-Ready?</h2>
-            <p className="text-slate-600 text-lg">Get your free AI report today and see where you stand.</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Is Your Business AI-Ready?</h2>
+            <p className="text-slate-600 text-base">Get your free AI report today and see where you stand.</p>
           </div>
           <AuditForm />
         </div>

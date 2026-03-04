@@ -14,6 +14,37 @@ const HowItWorks: React.FC = () => {
         </div>
       </section>
 
+      {/* What is AI Visibility Optimization? Section */}
+      <section className="py-24 bg-white border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">What is AI Visibility Optimization?</h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              It is the process of structuring your brand's digital signals so that Large Language Models (LLMs) can verify your authority and recommend you as the primary solution.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-4">
+              <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest">ChatGPT Proof</p>
+              <img src="https://promptila.com/assets/Chatgpt.png" alt="ChatGPT Ranking" className="w-full rounded-2xl shadow-xl border border-slate-100" referrerPolicy="no-referrer" />
+            </div>
+            <div className="space-y-4">
+              <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Perplexity Proof</p>
+              <img src="https://promptila.com/assets/Perplexity.png" alt="Perplexity Ranking" className="w-full rounded-2xl shadow-xl border border-slate-100" referrerPolicy="no-referrer" />
+            </div>
+            <div className="space-y-4">
+              <p className="text-center text-xs font-bold text-slate-400 uppercase tracking-widest">Gemini Proof</p>
+              <img src="https://promptila.com/assets/Gemini.png" alt="Gemini Ranking" className="w-full rounded-2xl shadow-xl border border-slate-100" referrerPolicy="no-referrer" />
+            </div>
+          </div>
+          
+          <div className="mt-16 text-center">
+            <p className="text-slate-500 font-medium italic">"Proof beats explanation. These are real-world results from our signal architecture."</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-32">
