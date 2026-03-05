@@ -43,12 +43,12 @@ const Home: React.FC = () => {
       </section>
 
       {/* Case Study Highlight Block */}
-      <section className="bg-indigo-600 py-12 relative overflow-hidden">
+      <section className="bg-indigo-600 py-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
             <div className="text-white">
               <span className="inline-block px-3 py-1 bg-indigo-500 text-indigo-100 font-bold rounded-full text-[10px] uppercase tracking-widest mb-4">Case Study Proof</span>
-              <h2 className="text-xl md:text-2xl font-bold leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold leading-tight">
                 Big Lake Candy Company went from invisible to <span className="text-indigo-200 underline decoration-indigo-300 underline-offset-4">#1 on ChatGPT</span> in 30 days.
               </h2>
             </div>
@@ -56,9 +56,30 @@ const Home: React.FC = () => {
               to="/case-study/big-lake-candy"
               className="whitespace-nowrap px-8 py-4 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-all active:scale-95"
             >
-              View Case Study
+              View Full Case Study
             </Link>
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: "https://promptila.com/assets/Chatgpt.png", alt: "ChatGPT Ranking" },
+              { src: "https://promptila.com/assets/Gemini.png", alt: "Gemini Ranking" },
+              { src: "https://promptila.com/assets/Perplexity.png", alt: "Perplexity Ranking" },
+              { src: "https://promptila.com/assets/claude.png", alt: "Claude Ranking" }
+            ].map((img, idx) => (
+              <div key={idx} className="bg-white/5 p-1 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                <img 
+                  src={img.src} 
+                  alt={img.alt} 
+                  className="w-full h-auto rounded shadow-sm"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-indigo-100 text-center mt-8 font-bold text-lg italic">
+            “Big Lake Candy cited across AI platforms within 30 days.”
+          </p>
         </div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
       </section>

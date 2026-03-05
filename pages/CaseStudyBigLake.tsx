@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const CaseStudyBigLake: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleDownload = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    
+    // Simulate sending email and trigger download
+    setSubmitted(true);
+    
+    // Trigger download
+    const link = document.createElement('a');
+    link.href = 'https://promptila.com/assets/fullcasestudy.pdf';
+    link.download = 'Promptila-AI-Visibility-Case-Study.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="pt-20 min-h-screen bg-white">
       {/* SECTION 1 – The Hook (Above the Fold) */}
@@ -15,29 +35,35 @@ const CaseStudyBigLake: React.FC = () => {
           >
             <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 font-bold rounded-full text-[10px] uppercase tracking-widest mb-4">Case Study</span>
             <h1 className="text-2xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight leading-tight">
-              How a Local Michigan Candy Shop Went From Invisible to #1 on ChatGPT, Gemini & Perplexity in 30 Days
+              How a Local Michigan Candy Shop Went From Invisible on ChatGPT, Gemini, Claude & Perplexity in 30 Days
             </h1>
             <p className="text-base md:text-lg text-slate-600 font-medium mb-8">
               A documented AI Visibility Optimization case study.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">ChatGPT #1</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">ChatGPT #1</p>
                 <a href="https://promptila.com/assets/Chatgpt.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
                   <img src="https://promptila.com/assets/Chatgpt.png" alt="ChatGPT #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Perplexity #1</p>
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Perplexity #1</p>
                 <a href="https://promptila.com/assets/Perplexity.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
                   <img src="https://promptila.com/assets/Perplexity.png" alt="Perplexity #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
-              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Gemini #1</p>
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Gemini #1</p>
                 <a href="https://promptila.com/assets/Gemini.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
                   <img src="https://promptila.com/assets/Gemini.png" alt="Gemini #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
+                </a>
+              </div>
+              <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Claude #1</p>
+                <a href="https://promptila.com/assets/claude.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
+                  <img src="https://promptila.com/assets/claude.png" alt="Claude #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
             </div>
@@ -126,8 +152,8 @@ const CaseStudyBigLake: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">The Breakthrough (Report 3)</h2>
-            <div className="inline-block bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded-r-2xl mb-6 text-left">
-              <p className="text-[9px] font-bold text-emerald-700 uppercase tracking-widest mb-1">Final Report Score</p>
+            <div className="inline-block bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded-r-2xl mb-8 text-left">
+              <p className="text-[9px] font-bold text-emerald-700 uppercase tracking-widest mb-1">Report 3 Score</p>
               <p className="text-4xl font-black text-emerald-600 tracking-tighter">67/100</p>
               <p className="text-emerald-700 font-medium mt-1 text-base">All three signal categories established. Cited across all three major platforms.</p>
             </div>
@@ -139,7 +165,28 @@ const CaseStudyBigLake: React.FC = () => {
                 className="inline-flex items-center text-indigo-600 font-bold hover:underline text-lg"
               >
                 <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
-                Download Full AI Visibility Case Study
+                View Report 3 PDF
+              </a>
+            </div>
+          </div>
+
+          {/* SECTION 4.5 – The Peak (Report 4) */}
+          <div className="text-center mb-16">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">The Peak (Report 4)</h2>
+            <div className="inline-block bg-indigo-50 border-l-4 border-indigo-500 p-6 rounded-r-2xl mb-8 text-left">
+              <p className="text-[9px] font-bold text-indigo-700 uppercase tracking-widest mb-1">Final Report Score</p>
+              <p className="text-5xl font-black text-indigo-600 tracking-tighter">71/100</p>
+              <p className="text-indigo-700 font-medium mt-1 text-lg">All four signal categories established. Cited across all three major platforms.</p>
+            </div>
+            <div className="mt-4">
+              <a 
+                href="https://promptila.com/assets/BIGLAKE4.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-indigo-600 font-bold hover:underline text-lg"
+              >
+                <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"/></svg>
+                Download Full AI Visibility Case Study (Report 4)
               </a>
             </div>
           </div>
@@ -184,7 +231,8 @@ const CaseStudyBigLake: React.FC = () => {
             {[
               { score: "18", label: "Invisible", color: "bg-red-500" },
               { score: "42", label: "Optimized", color: "bg-amber-500" },
-              { score: "67", label: "Cited", color: "bg-emerald-500" }
+              { score: "67", label: "Cited", color: "bg-emerald-500" },
+              { score: "71", label: "Authoritative", color: "bg-indigo-500" }
             ].map((step, idx) => (
               <div key={idx} className="relative z-10 flex flex-col items-center">
                 <div className={`w-16 h-16 ${step.color} rounded-full flex items-center justify-center text-white text-xl font-black shadow-xl mb-3 border-4 border-white`}>
@@ -234,22 +282,44 @@ const CaseStudyBigLake: React.FC = () => {
 
           {/* Download PDF Section */}
           <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Download Full AI Visibility Case Study</h3>
-            <p className="text-slate-600 mb-8 max-w-md mx-auto">Get the complete technical breakdown and all three reports in one PDF.</p>
-            <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your work email" 
-                required 
-                className="flex-grow px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none"
-              />
-              <button 
-                type="submit" 
-                className="px-6 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all"
-              >
-                Download Now
-              </button>
-            </form>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Download the Complete 30-Day AI Visibility Case Study</h3>
+            <p className="text-slate-700 italic font-medium mb-6 max-w-2xl mx-auto leading-relaxed">
+              “Before this, nobody could find us through AI search. Within 30 days we started appearing in ChatGPT, Gemini, Claude and Perplexity results.”
+            </p>
+            <p className="text-slate-600 mb-8 max-w-md mx-auto">Get the complete technical breakdown and all four reports in one PDF.</p>
+            
+            {!submitted ? (
+              <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4" onSubmit={handleDownload}>
+                <input 
+                  type="email" 
+                  placeholder="Enter your work email" 
+                  required 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-grow px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none"
+                />
+                <button 
+                  type="submit" 
+                  className="px-6 py-3 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all active:scale-95"
+                >
+                  Download Now
+                </button>
+              </form>
+            ) : (
+              <div className="bg-emerald-50 border border-emerald-100 p-6 rounded-2xl max-w-md mx-auto">
+                <p className="text-emerald-800 font-bold mb-2">Success! Check your email.</p>
+                <p className="text-emerald-700 text-sm">We've sent the case study to <span className="font-bold">{email}</span>. Your download should have also started automatically.</p>
+                <a 
+                  href="https://promptila.com/assets/fullcasestudy.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 text-emerald-600 font-bold underline"
+                >
+                  Click here if download didn't start
+                </a>
+              </div>
+            )}
+            
             <p className="text-[10px] text-slate-400 mt-4 uppercase tracking-widest">Your privacy is guaranteed. No spam, ever.</p>
           </div>
         </div>
