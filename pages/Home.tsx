@@ -43,45 +43,45 @@ const Home: React.FC = () => {
       </section>
 
       {/* Case Study Highlight Block */}
-      <section className="bg-indigo-600 py-16 relative overflow-hidden">
+      <section className="bg-indigo-600 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
-            <div className="text-white">
-              <span className="inline-block px-3 py-1 bg-indigo-500 text-indigo-100 font-bold rounded-full text-[10px] uppercase tracking-widest mb-4">Case Study Proof</span>
-              <h2 className="text-2xl md:text-3xl font-bold leading-tight">
-                Big Lake Candy Company went from invisible to <span className="text-indigo-200 underline decoration-indigo-300 underline-offset-4">#1 on ChatGPT</span> in 30 days.
-              </h2>
-            </div>
-            <Link
-              to="/case-study/big-lake-candy"
-              className="whitespace-nowrap px-8 py-4 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-all active:scale-95"
-            >
-              View Full Case Study
-            </Link>
+          <div className="flex flex-col items-center text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-indigo-500 text-indigo-100 font-bold rounded-full text-xs uppercase tracking-widest mb-6">Case Study Proof</span>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight text-white max-w-4xl">
+              Big Lake Candy Company went from invisible to <span className="text-indigo-200 underline decoration-indigo-300 underline-offset-4">#1 on ChatGPT</span> in 30 days.
+            </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { src: "https://promptila.com/assets/Chatgpt.png", alt: "ChatGPT Ranking" },
-              { src: "https://promptila.com/assets/Gemini.png", alt: "Gemini Ranking" },
-              { src: "https://promptila.com/assets/Perplexity.png", alt: "Perplexity Ranking" },
-              { src: "https://promptila.com/assets/claude.png", alt: "Claude Ranking" }
-            ].map((img, idx) => (
-              <div key={idx} className="bg-white/5 p-1 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  className="w-full h-auto rounded shadow-sm"
-                  referrerPolicy="no-referrer"
-                />
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white p-2 rounded-2xl shadow-2xl border border-white/20 transform hover:scale-[1.01] transition-transform duration-500">
+              <img 
+                src="https://promptila.com/assets/Chatgpt.png" 
+                alt="ChatGPT recommending Big Lake Candy Company" 
+                className="w-full h-auto rounded-xl shadow-inner"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="mt-12 text-center">
+              <p className="text-indigo-100 font-bold text-xl md:text-2xl italic leading-relaxed">
+                Big Lake Candy Company went from invisible to appearing across ChatGPT, Gemini, Perplexity, and Claude in 30 days.
+              </p>
+              <div className="mt-10">
+                <Link
+                  to="/case-study/big-lake-candy"
+                  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-xl shadow-lg hover:bg-indigo-50 transition-all active:scale-95 text-lg"
+                >
+                  View Full Case Study
+                  <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </Link>
               </div>
-            ))}
+            </div>
           </div>
-          <p className="text-indigo-100 text-center mt-8 font-bold text-lg italic">
-            “Big Lake Candy cited across AI platforms within 30 days.”
-          </p>
         </div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
       </section>
 
       {/* Trust Section / Logos */}
@@ -228,8 +228,34 @@ const Home: React.FC = () => {
       <section id="audit" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Is Your Business AI-Ready?</h2>
-            <p className="text-slate-600 text-base">Get your free AI report today and see where you stand.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Is Your Business AI-Ready?</h2>
+            <p className="text-slate-600 text-lg mb-12">Get your free AI report today and see where you stand.</p>
+            
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-8 md:p-10 text-left mb-12">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">What You’ll Receive</h3>
+              <p className="text-slate-700 font-medium mb-6">Your free AI Visibility Audit includes:</p>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Your AI Visibility Score (0–100)",
+                  "Where your business appears on ChatGPT",
+                  "Where competitors are being recommended",
+                  "How AI currently describes your business",
+                  "The 3 biggest visibility gaps hurting your recommendations"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start space-x-3">
+                    <div className="mt-1.5 h-2 w-2 bg-indigo-600 rounded-full flex-shrink-0"></div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-indigo-600 font-bold border-t border-slate-200 pt-6">
+                Delivered within 48 hours.
+              </p>
+            </div>
+          </div>
+          <div className="text-center mb-12">
+            <p className="text-slate-900 font-bold text-lg mb-2">Not sure where to start?</p>
+            <p className="text-slate-600">Every Promptila engagement begins with a free AI Visibility Audit.</p>
           </div>
           <AuditForm />
         </div>

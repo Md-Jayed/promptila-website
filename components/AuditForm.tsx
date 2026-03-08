@@ -7,7 +7,6 @@ const AuditForm: React.FC = () => {
     businessName: '',
     website: '',
     email: '',
-    phone: '',
     industry: '',
     location: '',
   });
@@ -62,7 +61,6 @@ const AuditForm: React.FC = () => {
           businessName: '',
           website: '',
           email: '',
-          phone: '',
           industry: '',
           location: '',
         });
@@ -115,7 +113,7 @@ const AuditForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Work Email</label>
+          <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">Email</label>
           <input
             type="email"
             id="email"
@@ -124,19 +122,6 @@ const AuditForm: React.FC = () => {
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
             placeholder="jane@company.com"
             value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">Phone Number</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
-            placeholder="+1 (555) 000-0000"
-            value={formData.phone}
             onChange={handleChange}
           />
         </div>
@@ -156,12 +141,12 @@ const AuditForm: React.FC = () => {
         <div>
           <label htmlFor="website" className="block text-sm font-medium text-slate-700 mb-1">Company Website</label>
           <input
-            type="url"
+            type="text"
             id="website"
             name="website"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
-            placeholder="https://company.com"
+            placeholder="biglakecandy.com"
             value={formData.website}
             onChange={handleChange}
           />
@@ -179,7 +164,7 @@ const AuditForm: React.FC = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="md:col-span-2">
+        <div>
           <label htmlFor="location" className="block text-sm font-medium text-slate-700 mb-1">Primary Location</label>
           <input
             type="text"
@@ -233,8 +218,9 @@ const AuditForm: React.FC = () => {
              <span className="text-xs font-bold text-slate-900 tracking-wider uppercase">Privacy Guaranteed</span>
            </div>
         </div>
-        <p className="text-center text-slate-400 text-[10px] mt-4 uppercase tracking-tighter">
-          Analysis powered by Promptila Proprietary AI Evaluation Engines.
+        <p className="text-center text-slate-400 text-[11px] mt-4 leading-relaxed">
+          Your audit is manually reviewed by our team and delivered within 48 hours.<br />
+          No sales call. No obligation.
         </p>
       </div>
     </form>

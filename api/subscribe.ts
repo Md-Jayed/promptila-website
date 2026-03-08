@@ -6,7 +6,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, name, businessName, website, phone, industry, location } = req.body;
+  const { email: rawEmail, name, businessName, website, phone, industry, location } = req.body;
+  const email = rawEmail?.trim().toLowerCase();
 
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
@@ -137,9 +138,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     return res.status(200).json({ message: "Successfully subscribed!", data: contactResponse.data });
   } catch (error: any) {
-    console.error("Systeme.io API Error:", error.response?.data || error.message);
+    const errorData = error.response?.data;
+    console.error("Systeme.io API Error:", JSON.stringify(errorData || error.message));
     const status = error.response?.status || 500;
-    const message = error.response?.data?.message || "Failed to connect to Systeme.io";
-    return res.status(status).json({ error: message });
+    
+    // Extract specific validation messages if available
+    let errorMessage = "Failed to connect to Systeme.io";
+    if (errorData && errorData.detail) {
+      errorMessage = errorData.detail;
+    } else if (errorData && errorData.message) {
+      errorMessage = errorData.message;
+    }
+    
+    return res.status(status).json({ error: errorMessage });
   }
 }

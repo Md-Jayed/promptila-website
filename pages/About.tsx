@@ -29,6 +29,30 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Founder Section */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-48 h-48 bg-slate-200 rounded-2xl overflow-hidden flex-shrink-0 grayscale">
+              <img 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400" 
+                alt="Steve Korbal" 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-1">Steve Korbal</h2>
+              <p className="text-indigo-600 font-bold mb-4">Founder, Promptila</p>
+              <p className="text-slate-500 text-sm mb-6 uppercase tracking-widest font-semibold">Clarkston, Michigan</p>
+              <p className="text-slate-600 text-lg leading-relaxed italic">
+                "Promptila was created after seeing local businesses struggle to appear in AI search results. Our goal is to help businesses become the recommended answer when customers ask AI for services."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">

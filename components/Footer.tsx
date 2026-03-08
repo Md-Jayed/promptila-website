@@ -17,10 +17,6 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-sm leading-relaxed max-w-xs">
               Optimizing high-trust brands for the AI recommendation era. We ensure your business is the only logical answer.
             </p>
-            <div className="mt-6 flex items-center space-x-2 bg-slate-800 px-3 py-1.5 rounded-full w-fit">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Global Systems Operational</span>
-            </div>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-6 uppercase tracking-widest text-xs">Solutions</h4>

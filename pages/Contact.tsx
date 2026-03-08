@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h1 className="text-5xl font-extrabold text-slate-900 mb-6">Get in Touch</h1>
+              <h1 className="text-5xl font-extrabold text-slate-900 mb-6">Get Your Free AI Visibility Report</h1>
               <p className="text-xl text-slate-600 leading-relaxed mb-10">
                 Stop guessing how AI models view your brand. Request your free AI report below or reach out to our team directly.
               </p>
