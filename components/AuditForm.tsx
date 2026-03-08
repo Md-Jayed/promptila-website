@@ -40,10 +40,7 @@ const AuditForm: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          email: formData.email,
-          firstName: formData.name,
-        }),
+        body: JSON.stringify(formData),
       });
 
       // 2. Original Web3Forms submission (optional, keeping it for email notifications)
