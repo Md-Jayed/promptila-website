@@ -34,6 +34,19 @@ const AuditForm: React.FC = () => {
     };
 
     try {
+      // 1. Send to Systeme.io via our backend
+      const systemeResponse = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          firstName: formData.name,
+        }),
+      });
+
+      // 2. Original Web3Forms submission (optional, keeping it for email notifications)
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -45,7 +58,7 @@ const AuditForm: React.FC = () => {
 
       const result = await response.json();
 
-      if (result.success) {
+      if (result.success || systemeResponse.ok) {
         setIsSubmitted(true);
         setFormData({
           name: '',
