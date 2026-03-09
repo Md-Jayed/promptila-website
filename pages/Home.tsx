@@ -84,17 +84,12 @@ const Home: React.FC = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
       </section>
 
-      {/* Trust Section / Logos */}
-      <section className="bg-white py-12">
+      {/* Trust Section */}
+      <section className="bg-white py-12 border-b border-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm font-semibold text-slate-400 uppercase tracking-widest mb-8">Helping leaders navigate the AI shift</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-30 grayscale contrast-125">
-             <div className="text-2xl font-black italic tracking-tighter">FINTECH+</div>
-             <div className="text-2xl font-black italic tracking-tighter">HEALTH.LY</div>
-             <div className="text-2xl font-black italic tracking-tighter">LEGALHUB</div>
-             <div className="text-2xl font-black italic tracking-tighter">HOMEPRO</div>
-             <div className="text-2xl font-black italic tracking-tighter">SaaSFLOW</div>
-          </div>
+          <p className="text-center text-slate-500 font-medium tracking-tight">
+            Trusted by growing businesses across Michigan and the United States.
+          </p>
         </div>
       </section>
 

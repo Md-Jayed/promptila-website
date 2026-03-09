@@ -33,9 +33,9 @@ const About: React.FC = () => {
       <section className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-48 h-48 bg-slate-200 rounded-2xl overflow-hidden flex-shrink-0 grayscale">
+            <div className="w-48 h-48 bg-slate-200 rounded-2xl overflow-hidden flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400" 
+                src="https://promptila.com/assets/stevekorbal.png" 
                 alt="Steve Korbal" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
