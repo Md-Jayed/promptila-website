@@ -15,7 +15,7 @@ const CaseStudyBigLake: React.FC = () => {
     
     // Trigger download
     const link = document.createElement('a');
-    link.href = 'https://promptila.com/assets/fullcasestudy.pdf';
+    link.href = 'https://green-ibex-616338.hostingersite.com/assets/fullcasestudy.pdf';
     link.download = 'Promptila-AI-Visibility-Case-Study.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
@@ -44,26 +44,26 @@ const CaseStudyBigLake: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
               <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
                 <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">ChatGPT #1</p>
-                <a href="https://promptila.com/assets/Chatgpt.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
-                  <img src="https://promptila.com/assets/Chatgpt.png" alt="ChatGPT #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
+                <a href="https://green-ibex-616338.hostingersite.com/assets/Chatgpt.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
+                  <img src="https://green-ibex-616338.hostingersite.com/assets/Chatgpt.png" alt="ChatGPT #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
               <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
                 <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Perplexity #1</p>
-                <a href="https://promptila.com/assets/Perplexity.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
-                  <img src="https://promptila.com/assets/Perplexity.png" alt="Perplexity #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
+                <a href="https://green-ibex-616338.hostingersite.com/assets/Perplexity.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
+                  <img src="https://green-ibex-616338.hostingersite.com/assets/Perplexity.png" alt="Perplexity #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
               <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
                 <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Gemini #1</p>
-                <a href="https://promptila.com/assets/Gemini.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
-                  <img src="https://promptila.com/assets/Gemini.png" alt="Gemini #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
+                <a href="https://green-ibex-616338.hostingersite.com/assets/Gemini.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
+                  <img src="https://green-ibex-616338.hostingersite.com/assets/Gemini.png" alt="Gemini #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
               <div className="bg-white p-3 rounded-xl shadow-sm border border-slate-200">
                 <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2">Claude #1</p>
-                <a href="https://promptila.com/assets/claude.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
-                  <img src="https://promptila.com/assets/claude.png" alt="Claude #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
+                <a href="https://green-ibex-616338.hostingersite.com/assets/claude.png" target="_blank" rel="noopener noreferrer" className="block group overflow-hidden rounded-lg">
+                  <img src="https://green-ibex-616338.hostingersite.com/assets/claude.png" alt="Claude #1 Ranking" className="w-full rounded-lg border border-slate-100 shadow-inner group-hover:scale-105 transition-transform duration-300 cursor-zoom-in" referrerPolicy="no-referrer" />
                 </a>
               </div>
             </div>
@@ -83,7 +83,7 @@ const CaseStudyBigLake: React.FC = () => {
                 <p className="text-red-700 font-medium mt-1 italic text-xs">Invisible across all platforms.</p>
               </div>
               <a 
-                href="https://promptila.com/assets/BIGLAKE1.pdf" 
+                href="https://green-ibex-616338.hostingersite.com/assets/BIGLAKE1.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-indigo-600 font-bold hover:underline mb-8"
@@ -134,7 +134,7 @@ const CaseStudyBigLake: React.FC = () => {
                 <p className="text-amber-700 font-medium mt-1 italic text-xs">+24 improvement — Still not cited</p>
               </div>
               <a 
-                href="https://promptila.com/assets/BIGLAKE2.pdf" 
+                href="https://green-ibex-616338.hostingersite.com/assets/BIGLAKE2.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-indigo-600 font-bold hover:underline"
@@ -159,7 +159,7 @@ const CaseStudyBigLake: React.FC = () => {
             </div>
             <div className="mt-4">
               <a 
-                href="https://promptila.com/assets/BIGLAKE3.pdf" 
+                href="https://green-ibex-616338.hostingersite.com/assets/BIGLAKE3.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-indigo-600 font-bold hover:underline text-lg"
@@ -180,7 +180,7 @@ const CaseStudyBigLake: React.FC = () => {
             </div>
             <div className="mt-4">
               <a 
-                href="https://promptila.com/assets/BIGLAKE4.pdf" 
+                href="https://green-ibex-616338.hostingersite.com/assets/BIGLAKE4.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-indigo-600 font-bold hover:underline text-lg"
@@ -310,7 +310,7 @@ const CaseStudyBigLake: React.FC = () => {
                 <p className="text-emerald-800 font-bold mb-2">Success! Check your email.</p>
                 <p className="text-emerald-700 text-sm">We've sent the case study to <span className="font-bold">{email}</span>. Your download should have also started automatically.</p>
                 <a 
-                  href="https://promptila.com/assets/fullcasestudy.pdf" 
+                  href="https://green-ibex-616338.hostingersite.com/assets/fullcasestudy.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block mt-4 text-emerald-600 font-bold underline"

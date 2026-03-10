@@ -35,7 +35,7 @@ const About: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-48 h-48 bg-slate-200 rounded-2xl overflow-hidden flex-shrink-0">
               <img 
-                src="https://promptila.com/assets/stevekorbal.png" 
+                src="https://green-ibex-616338.hostingersite.com/assets/stevekorbal.png" 
                 alt="Steve Korbal" 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
