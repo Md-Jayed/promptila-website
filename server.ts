@@ -29,7 +29,13 @@ async function startServer() {
 
   // Test route to verify API is working
   app.get("/api/health", (req, res) => {
-    res.json({ status: "ok", message: "API is alive", timestamp: new Date().toISOString() });
+    console.log("Health check requested");
+    res.json({ status: "ok", message: "Express server is running correctly", timestamp: new Date().toISOString() });
+  });
+
+  // Simple test route for Hostinger verification
+  app.get("/test", (req, res) => {
+    res.send("<h1>Express Server is Running!</h1><p>If you see this, your Node.js app is correctly configured on Hostinger.</p>");
   });
 
   // Subscription endpoint directly in server.ts for better reliability on Hostinger

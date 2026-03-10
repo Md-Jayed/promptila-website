@@ -34,13 +34,26 @@ const AuditForm: React.FC = () => {
 
     try {
       // 1. Send to Systeme.io via our backend
-      const systemeResponse = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      let systemeResponse;
+      try {
+        systemeResponse = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        if (!systemeResponse.ok) {
+          const text = await systemeResponse.text();
+          console.error("Systeme.io API Error Response:", text);
+          if (text.includes('<!DOCTYPE html>') || text.includes('<html')) {
+            throw new Error("Server configuration error (404). Please ensure the Node.js backend is running correctly on Hostinger.");
+          }
+        }
+      } catch (e) {
+        console.error("Failed to reach backend API:", e);
+      }
 
       // 2. Original Web3Forms submission (optional, keeping it for email notifications)
       const response = await fetch('https://api.web3forms.com/submit', {
