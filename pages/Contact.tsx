@@ -9,9 +9,9 @@ const Contact: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h1 className="text-4xl font-extrabold text-slate-900 mb-5">Get Your Free AI Visibility Report</h1>
+              <h1 className="text-4xl font-extrabold text-slate-900 mb-5">Is Your Business Showing Up in AI Recommendations?</h1>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Stop guessing how AI models view your brand. Request your free AI report below or reach out to our team directly.
+                Stop guessing how AI models see your business. Run a free audit to see if your company appears in ChatGPT, Gemini, and Perplexity results.
               </p>
 
               {/* Direct Contact Details */}
