@@ -32,27 +32,27 @@ const Industries: React.FC = () => {
 
   return (
     <div className="pt-20">
-      <section className="bg-white py-24">
+      <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-extrabold text-slate-900 mb-6">Vertical-Specific Expertise</h1>
-          <p className="text-xl text-slate-600">AI behaves differently in every industry. We understand the nuances of the models you care about most.</p>
+          <h1 className="text-4xl font-extrabold text-slate-900 mb-5">Vertical-Specific Expertise</h1>
+          <p className="text-lg text-slate-600">AI behaves differently in every industry. We understand the nuances of the models you care about most.</p>
         </div>
       </section>
 
-      <section className="py-24 bg-slate-50">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {industries.map((industry) => (
-              <div key={industry.id} className="bg-white p-10 rounded-2xl shadow-sm border border-slate-200">
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">{industry.title}</h3>
-                <div className="space-y-6">
+              <div key={industry.id} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                <h3 className="text-xl font-bold text-slate-900 mb-5">{industry.title}</h3>
+                <div className="space-y-5">
                   <div>
-                    <h4 className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2">Why AI Matters Here</h4>
-                    <p className="text-slate-600 leading-relaxed">{industry.why}</p>
+                    <h4 className="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-1.5">Why AI Matters Here</h4>
+                    <p className="text-slate-600 leading-relaxed text-sm">{industry.why}</p>
                   </div>
                   <div>
-                    <h4 className="text-indigo-600 font-bold text-sm uppercase tracking-widest mb-2">How Promptila Helps</h4>
-                    <p className="text-slate-600 leading-relaxed">{industry.help}</p>
+                    <h4 className="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-1.5">How Promptila Helps</h4>
+                    <p className="text-slate-600 leading-relaxed text-sm">{industry.help}</p>
                   </div>
                 </div>
               </div>
@@ -61,13 +61,13 @@ const Industries: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Is your industry highly competitive?</h2>
-          <p className="text-lg text-slate-600 mb-10">That’s exactly where AI Visibility Optimization provides the greatest competitive moat.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-5">Is your industry highly competitive?</h2>
+          <p className="text-base text-slate-600 mb-8">That’s exactly where AI Visibility Optimization provides the greatest competitive moat.</p>
           <Link
             to="/contact"
-            className="inline-block px-10 py-5 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all active:scale-95"
+            className="inline-block px-8 py-4 bg-slate-900 text-white font-bold rounded-xl hover:bg-black transition-all active:scale-95 text-base"
           >
             Get Your Free AI Report
           </Link>
