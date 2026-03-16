@@ -3,8 +3,8 @@
 import React from 'react';
 
 export interface AuditRequest {
-  name: string;
-  businessName: string;
+  full_name: string;
+  business_name: string;
   website: string;
   email: string;
   industry: string;

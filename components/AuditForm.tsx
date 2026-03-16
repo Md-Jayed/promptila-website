@@ -3,8 +3,8 @@ import { AuditRequest } from '../types.ts';
 
 const AuditForm: React.FC = () => {
   const [formData, setFormData] = useState<AuditRequest>({
-    name: '',
-    businessName: '',
+    full_name: '',
+    business_name: '',
     website: '',
     email: '',
     industry: '',
@@ -26,19 +26,24 @@ const AuditForm: React.FC = () => {
     setError(null);
 
     try {
+      const payload = {
+        ...formData,
+        submitted_at: new Date().toISOString()
+      };
+
       const response = await fetch('https://hook.us2.make.com/q6qrftk18xuc86ywq7qecp65sk06k8lx', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
         setFormData({
-          name: '',
-          businessName: '',
+          full_name: '',
+          business_name: '',
           website: '',
           email: '',
           industry: '',
@@ -62,9 +67,9 @@ const AuditForm: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">Request Received</h3>
+        <h3 className="text-2xl font-bold text-slate-900 mb-4">Your free audit is on its way!</h3>
         <p className="text-slate-600 mb-8 max-w-md mx-auto">
-          Thank you for your interest. Our AI analysts are preparing your preliminary report. We'll be in touch at <strong>hello@promptila.com</strong> within 24-48 hours.
+          Check your inbox in the next few minutes. Our AI analysts are preparing your preliminary report.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
@@ -80,15 +85,15 @@ const AuditForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100 relative overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+          <label htmlFor="full_name" className="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="full_name"
+            name="full_name"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
             placeholder="Jane Doe"
-            value={formData.name}
+            value={formData.full_name}
             onChange={handleChange}
           />
         </div>
@@ -106,15 +111,15 @@ const AuditForm: React.FC = () => {
           />
         </div>
         <div>
-          <label htmlFor="businessName" className="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
+          <label htmlFor="business_name" className="block text-sm font-medium text-slate-700 mb-1">Business Name</label>
           <input
             type="text"
-            id="businessName"
-            name="businessName"
+            id="business_name"
+            name="business_name"
             required
             className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
             placeholder="Acme Corp"
-            value={formData.businessName}
+            value={formData.business_name}
             onChange={handleChange}
           />
         </div>
