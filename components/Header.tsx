@@ -1,10 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const navLinks = [
@@ -12,24 +10,10 @@ const Header: React.FC = () => {
     { name: 'How It Works', path: '/how-it-works' },
     { name: 'Services', path: '/services' },
     { name: 'Industries', path: '/industries' },
-  ];
-
-  const caseStudies = [
-    { name: 'Big Lake Candy Company (Owosso, MI)', path: '/case-study/big-lake-candy' },
+    { name: 'Case Studies', path: '/case-study/big-lake-candy' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
@@ -58,36 +42,6 @@ const Header: React.FC = () => {
                 {link.name}
               </Link>
             ))}
-
-            {/* Case Studies Dropdown */}
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`flex items-center text-sm font-medium transition-colors ${
-                  location.pathname.startsWith('/case-study') ? 'text-indigo-600' : 'text-slate-600 hover:text-indigo-600'
-                }`}
-              >
-                Case Studies
-                <svg className={`ml-1 h-4 w-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {isDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  {caseStudies.map((cs) => (
-                    <Link
-                      key={cs.path}
-                      to={cs.path}
-                      onClick={() => setIsDropdownOpen(false)}
-                      className="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition-colors"
-                    >
-                      {cs.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
 
             <Link
               to="/contact"
@@ -140,25 +94,6 @@ const Header: React.FC = () => {
                 {link.name}
               </Link>
             ))}
-
-            {/* Mobile Case Studies */}
-            <div className="space-y-1">
-              <div className="px-3 py-2 text-base font-bold text-slate-900 border-t border-slate-100 mt-2 pt-4">
-                Case Studies
-              </div>
-              {caseStudies.map((cs) => (
-                <Link
-                  key={cs.path}
-                  to={cs.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-6 py-2 text-sm font-medium ${
-                    isActive(cs.path) ? 'text-indigo-600 bg-slate-50' : 'text-slate-600 hover:text-indigo-600'
-                  }`}
-                >
-                  {cs.name}
-                </Link>
-              ))}
-            </div>
 
             <Link
               to="/contact"
