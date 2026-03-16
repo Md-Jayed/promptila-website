@@ -25,16 +25,8 @@ const AuditForm: React.FC = () => {
     setIsSubmitting(true);
     setError(null);
 
-    const submissionData = {
-      ...formData,
-      access_key: 'bb9cea90-7aae-41fb-ba0d-600abb37adce',
-      subject: `New AI Visibility Audit Request from ${formData.businessName}`,
-      from_name: 'Promptila Website',
-    };
-
     try {
-      // 1. Send to Systeme.io via our backend
-      const systemeResponse = await fetch('/api/subscribe', {
+      const response = await fetch('https://hook.us2.make.com/q6qrftk18xuc86ywq7qecp65sk06k8lx', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,19 +34,7 @@ const AuditForm: React.FC = () => {
         body: JSON.stringify(formData),
       });
 
-      // 2. Original Web3Forms submission (optional, keeping it for email notifications)
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(submissionData)
-      });
-
-      const result = await response.json();
-
-      if (result.success || systemeResponse.ok) {
+      if (response.ok) {
         setIsSubmitted(true);
         setFormData({
           name: '',
@@ -65,7 +45,7 @@ const AuditForm: React.FC = () => {
           location: '',
         });
       } else {
-        setError(result.message || 'Something went wrong. Please try again.');
+        setError('Something went wrong. Please try again.');
       }
     } catch (err) {
       setError('Failed to connect to the server. Please check your internet connection.');
