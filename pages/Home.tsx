@@ -55,7 +55,7 @@ const Home: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white p-1.5 rounded-2xl shadow-2xl border border-white/20 transform hover:scale-[1.01] transition-transform duration-500">
               <img 
-                src="https://green-ibex-616338.hostingersite.com/assets/Chatgpt.png" 
+                src="https://promptila.com/assets/Chatgpt.png" 
                 alt="ChatGPT recommending Big Lake Candy Company" 
                 className="w-full h-auto rounded-xl shadow-inner"
                 referrerPolicy="no-referrer"
